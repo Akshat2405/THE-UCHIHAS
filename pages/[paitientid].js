@@ -1,9 +1,12 @@
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import homeImg from '../public/Home-img.svg'
 import { useState } from 'react'
-export default function Home() {
+import { useRouter } from 'next/router'
+import homeImg from '../public/Home-img.svg'
+export default function patientid() {
+    const router = useRouter();
+    const patId=router.query.paitientid;
+    console.log()
   return (
     <>
     <header>
@@ -14,6 +17,8 @@ export default function Home() {
     <nav className="nav">
         <ul>
             <li><Link href="/"><a className="navtag">home</a></Link></li>
+            <li><Link href="/"><a className="navtag">Doctors</a></Link></li>
+            <li><Link href="/"><a className="navtag">Patients</a></Link></li>
         </ul>
     </nav>
     
@@ -33,7 +38,7 @@ export default function Home() {
 
               <div className="col-md-6 pl-md-5 content" data-aos="fade-left">
                   <h1><span>stay</span> safe, <span>stay</span> healthy.</h1>
-                  <h3>caring for you.</h3>
+                  <h3>{patId}</h3>
                   <Link href="/hospitals"><a ><button className="button">Hospital</button></a></Link>
               </div>
 
