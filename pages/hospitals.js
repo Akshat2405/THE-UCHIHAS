@@ -2,7 +2,35 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import { useState } from 'react'
+import  db from '../public/firebase-config';
 export default function hospital() {
+      const [data,setdata]=useState();
+      const ref=db.ref('/');
+            ref.once('value',(sanpshot)=>{
+                  setdata(sanpshot.val());
+            });
+      const showdata=()=>{
+            let str=[];
+            if(data!==undefined){
+                  for(let key in data){
+                        let key2="/hospitals/"+key+"/login";
+                        str.push(
+                              <div class="card" style={{'width':'35rem','margin':'10px'}}>
+                                    <div class="card-body">
+                                    <h5 class="card-title" style={{fontSize:'2rem'}}>{key}</h5>
+                                    <p class="card-text">New Delhi(S)</p>
+                                    <p class="card-text"></p>
+                                    <Link href= {key2}><a ><button className="button" style={{margin:'5px'}}>Sign in</button></a></Link>
+                                    <Link href="/contact"><a ><button className="button">Contact Us</button></a></Link>
+                                    </div>
+                              </div>
+                          )
+                  }
+                  return str;
+                  console.log(str);
+            }
+
+      }
   return (
     <>
     <header>
@@ -22,7 +50,7 @@ export default function hospital() {
     </header>
     <div className="row min-vh-100 align-items-center text-center text-md-left">
       <div className="row" style={{fontSize:'2rem',width:'100%',margin:'auto'}}>
-      <div class="card" style={{'width':'35rem','margin':'10px'}}>
+      {/* <div class="card" style={{'width':'35rem','margin':'10px'}}>
             <div class="card-body">
             <h5 class="card-title" style={{fontSize:'2rem'}}>All India Institute of Medical Sciences (AIIMS)</h5>
             <p class="card-text">New Delhi(S)</p>
@@ -93,7 +121,8 @@ export default function hospital() {
             <Link href="/login"><a ><button className="button" style={{margin:'5px'}}>Sign in</button></a></Link>
             <Link href="/contact"><a ><button className="button">Contact Us</button></a></Link>
             </div>
-      </div>
+      </div> */}
+      {showdata()}
       </div>
       </div>
       </>
