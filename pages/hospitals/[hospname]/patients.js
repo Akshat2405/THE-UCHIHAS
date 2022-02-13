@@ -21,10 +21,10 @@ export default function patient() {
         if(data!==undefined){
               for(let key in data){
                     str.push(
-                        <div class="card">
-                        <div class="d-flex justify-content-between">
+                        <div className="card">
+                        <div className="d-flex justify-content-between">
                             <div >
-                            <div class="d-flex justify-content-between">
+                            <div className="d-flex justify-content-between">
                             <Image src={patientImg} width="200px" height="200px" alt="find nothing"/>
                             </div>
                             </div>
@@ -46,7 +46,7 @@ export default function patient() {
   return (
     <>
     <header>
-    <div class="container">
+    <div className="container">
 
     <Link href="/"><a className="logo"><span>H</span>ealth<span>C</span>are.</a></Link>
 

@@ -31,10 +31,10 @@ export default function vanti() {
                   }
                   if(ck===false) continue;
                     str.push(
-                        <div class="card">
-                        <div class="d-flex justify-content-between">
+                        <div className="card">
+                        <div className="d-flex justify-content-between">
                             <div >
-                            <div class="d-flex justify-content-between">
+                            <div className="d-flex justify-content-between">
                             <Image src={doctorImg} width="200px" height="200px" alt="find nothing"/>
                             <div style={{margin:'10px',fontSize:'2.5rem'}}>{key}</div>
                             </div>
@@ -53,7 +53,7 @@ export default function vanti() {
   return (
     <>
     <header>
-    <div class="container">
+    <div className="container">
 
     <Link href="/"><a className="logo"><span>H</span>ealth<span>C</span>are.</a></Link>
 

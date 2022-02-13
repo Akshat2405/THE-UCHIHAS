@@ -37,39 +37,10 @@ export default function addpat() {
         setdiscription('');
         setnumber('');
     }
-    // ref.once('value',(sanpshot)=>{
-    //     setdata(sanpshot.val())
-    // });
-//     const showdata=()=>{
-//         let str=[];
-//         if(data!==undefined){
-//               for(let key in data){
-//                     str.push(
-//                         <div class="card">
-//                         <div class="d-flex justify-content-between">
-//                             <div >
-//                             <div class="d-flex justify-content-between">
-//                             <Image src={doctorImg} width="200px" height="200px" alt="find nothing"/>
-//                             <div style={{margin:'10px'}}>{key}</div>
-//                             </div>
-//                             </div>
-//                             <div className=''>
-//                                 <div>MON-FRI</div>
-//                                 <div>9:00 to 16:00</div>
-//                                 <div>350</div>
-//                             </div>
-//                         </div>
-//                         </div>
-//                       )
-//               }
-//               return str;
-//         }
-
-//   }
   return (
     <>
     <header>
-    <div class="container">
+    <div className="container">
 
     <Link href="/"><a className="logo"><span>H</span>ealth<span>C</span>are.</a></Link>
 
@@ -98,31 +69,31 @@ export default function addpat() {
 
               <div className="col-md-6 pl-md-5 content" data-aos="fade-left">
               <form style={{fontSize:'2rem'}}>
-                <div class="mb-3">
-                    <label htmlfor="exampleInputEmail1" class="form-label">Id</label>
-                    <input type="text" class="form-control" id="id" name="id" aria-describedby="emailHelp"  value={id}onChange={(e)=>setId(e.target.value)}/>
+                <div className="mb-3">
+                    <label htmlfor="exampleInputEmail1" className="form-label">Id</label>
+                    <input type="text" className="form-control" id="id" name="id" aria-describedby="emailHelp"  value={id}onChange={(e)=>setId(e.target.value)}/>
                 </div>
-                <div class="mb-3">
-                    <label htmlfor="exampleInputEmail1" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp"  value={name}onChange={(e)=>setname(e.target.value)}/>
+                <div className="mb-3">
+                    <label htmlfor="exampleInputEmail1" className="form-label">Name</label>
+                    <input type="text" className="form-control" id="name" name="name" aria-describedby="emailHelp"  value={name}onChange={(e)=>setname(e.target.value)}/>
                 </div>
-                <div class="mb-3">
-                    <label htmlfor="exampleInputEmail1" class="form-label">Age</label>
-                    <input type="text" class="form-control" id="age" name="age" aria-describedby="emailHelp"  value={age}onChange={(e)=>setage(e.target.value)}/>
+                <div className="mb-3">
+                    <label htmlfor="exampleInputEmail1" className="form-label">Age</label>
+                    <input type="text" className="form-control" id="age" name="age" aria-describedby="emailHelp"  value={age}onChange={(e)=>setage(e.target.value)}/>
                 </div>
-                <div class="mb-3">
-                    <label htmlfor="exampleInputEmail1" class="form-label">Disease</label>
-                    <input type="text" class="form-control" id="disease" name="disease" aria-describedby="emailHelp"  value={disease}onChange={(e)=>setdisease(e.target.value)}/>
+                <div className="mb-3">
+                    <label htmlfor="exampleInputEmail1" className="form-label">Disease</label>
+                    <input type="text" className="form-control" id="disease" name="disease" aria-describedby="emailHelp"  value={disease}onChange={(e)=>setdisease(e.target.value)}/>
                 </div>
-                <div class="mb-3">
-                    <label htmlfor="exampleInputEmail1" class="form-label">Number</label>
-                    <input type="text" class="form-control" id="number" name="number" aria-describedby="emailHelp"  value={number}onChange={(e)=>setnumber(e.target.value)}/>
+                <div className="mb-3">
+                    <label htmlfor="exampleInputEmail1" className="form-label">Number</label>
+                    <input type="text" className="form-control" id="number" name="number" aria-describedby="emailHelp"  value={number}onChange={(e)=>setnumber(e.target.value)}/>
                 </div>
-                <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Treatment Description</label>
-                <textarea class="form-control" id="description" name="description"  value={description}onChange={(e)=>setdiscription(e.target.value)} rows="3"></textarea>
+                <div className="mb-3">
+                <label for="exampleFormControlTextarea1" className="form-label">Treatment Description</label>
+                <textarea className="form-control" id="description" name="description"  value={description}onChange={(e)=>setdiscription(e.target.value)} rows="3"></textarea>
                 </div>
-                <button type="submit" class="button" onClick={submitform}>Submit</button>
+                <button type="submit" className="button" onClick={submitform}>Submit</button>
             </form>
               </div>
 
