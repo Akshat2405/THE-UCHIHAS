@@ -35,13 +35,8 @@ export default function Login(props) {
             <Image src={loginImg} width="500%" alt="find nothing"/>
         </div>
         <div className="col-md-6 pl-md-5" data-aos="fade-left">
-            <form style={{fontSize:'2rem'}}>
-                {/* <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                    <input type="text" className="form-control" name="password" id="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
-                </div> */}
+            
             <Link href={str}><a ><button className="button">Submit</button></a></Link>
-            </form>
     </div>
 </div>
 </div>
@@ -50,3 +45,11 @@ export default function Login(props) {
       </>
   )
 }
+
+// {/* <form style={{fontSize:'2rem'}}>
+//                 <div className="mb-3">
+//                     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+//                     <input type="text" className="form-control" name="password" id="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+//                 </div> */}
+            
+//             </form> */}
