@@ -10,6 +10,7 @@ export default function patientid() {
     const strdoctor="/hospitals/"+patId+"/doctors";
     const strhome="/hospitals/"+patId;
     const strPat="/hospitals/"+patId+"/patients";
+    const straddpat="/hospitals/"+patId+"/addpatients";
   return (
     <>
     <header>
@@ -42,7 +43,7 @@ export default function patientid() {
               <div className="col-md-6 pl-md-5 content" data-aos="fade-left">
                   <h1><span>Welcome</span> to, <span>our</span> Hospital.</h1>
                   <h3>{patId}</h3>
-                  <Link href="/hospitals"><a ><button className="button">Add Patient</button></a></Link>
+                  <Link href={straddpat}><a ><button className="button">Add Patient</button></a></Link>
               </div>
 
           </div>

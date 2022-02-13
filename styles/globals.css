@@ -151,6 +151,14 @@ header .fa-bars{
 .home .content h1 span{
   color:var(--blue);
 }
+h1{
+  font-size: 5rem;
+  color:var(--black);
+}
+
+h1 span{
+  color:var(--blue);
+}
 
 .home .content h3{
   font-size: 4rem;
