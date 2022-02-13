@@ -26,7 +26,7 @@ export default function vanti() {
                   let arr=[];
                   let ck=true;
                   for(let key2 in data[key][venti]){
-                      arr.push(<div>{key2}:{data[key][venti][key2]}</div>)
+                      arr.push(<div style={{fontSize:'2rem'}}>{key2}:{data[key][venti][key2]}</div>)
                       if(data[key][venti][key2]===0) ck=false;
                   }
                   if(ck===false) continue;
@@ -36,10 +36,10 @@ export default function vanti() {
                             <div >
                             <div class="d-flex justify-content-between">
                             <Image src={doctorImg} width="200px" height="200px" alt="find nothing"/>
-                            <div style={{margin:'10px',fontSize:'5rem'}}>{key}</div>
+                            <div style={{margin:'10px',fontSize:'2.5rem'}}>{key}</div>
                             </div>
                             </div>
-                            <div className=''>
+                            <div style={{marginTop:'40px',marginRight:'40px'}}>
                                 {arr}
                             </div>
                         </div>

@@ -28,11 +28,12 @@ export default function patient() {
                             <Image src={patientImg} width="200px" height="200px" alt="find nothing"/>
                             </div>
                             </div>
-                            <div className=''>
+                            <div style={{marginTop:'20px',fontSize:'1.2rem'}}>
                                 <div>Id:{key}</div>
                                 <div>Name:{data[key]['name']}</div>
                                 <div>Age:{data[key]['age']}</div>
                                 <div>Disease:{data[key]['disease']}</div>
+                                <div>Decription:{data[key]['treatment description']}</div>
                             </div>
                         </div>
                         </div>

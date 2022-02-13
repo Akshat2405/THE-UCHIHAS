@@ -26,13 +26,16 @@ export default function doctor() {
                             <div >
                             <div class="d-flex justify-content-between">
                             <Image src={doctorImg} width="200px" height="200px" alt="find nothing"/>
-                            <div style={{margin:'10px'}}>{key}</div>
+                            <div>
+                            <div style={{margin:'10px',marign:'auto',fontSize:'3rem'}}>{key}</div>
+                            <div style={{margin:'10px' ,marign:'auto',width:'110px'}}>{data[key]['about']}</div>
                             </div>
                             </div>
-                            <div className=''>
+                            </div>
+                            <div style={{fontSize:'2rem',marginLeft:'40px',marginTop:'40px',fontWeight:'bold'}}>
                                 <div>MON-FRI</div>
                                 <div>9:00 to 16:00</div>
-                                <div>350</div>
+                                <div>350 INR</div>
                             </div>
                         </div>
                         </div>
