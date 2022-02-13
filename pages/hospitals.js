@@ -13,7 +13,7 @@ export default function Hospital() {
             let str=[];
             if(data!==undefined){
                   for(let key in data){
-                        let key2="/hospitals/"+key+"/login";
+                        let key2="/hospitals/"+key;
                         let key3="/hospitals/"+key+"/searchbyid";
                         str.push(
                               <div className="card" style={{'width':'35rem','margin':'10px'}}>
