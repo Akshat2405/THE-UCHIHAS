@@ -7,7 +7,6 @@ export default function Login(props) {
     const router = useRouter();
     const patId=router.query.hospname;
     let str="/hospitals/"+patId;
-    const [email,setEmail]=useState("");
     const[password,setPassword]=useState("");
   return (
     <>
