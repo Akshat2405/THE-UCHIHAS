@@ -36,7 +36,7 @@ export default function vanti() {
                             <div >
                             <div class="d-flex justify-content-between">
                             <Image src={doctorImg} width="200px" height="200px" alt="find nothing"/>
-                            <div style={{margin:'10px'}}>{key}</div>
+                            <div style={{margin:'10px',fontSize:'5rem'}}>{key}</div>
                             </div>
                             </div>
                             <div className=''>
