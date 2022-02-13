@@ -12,7 +12,7 @@ export default function Login(props) {
   return (
     <>
     <header>
-    <div class="container">
+    <div className="container">
 
     <Link href="/"><a className="logo"><span>H</span>ealth<span>C</span>are.</a></Link>
 
@@ -22,7 +22,7 @@ export default function Login(props) {
         </ul>
     </nav>
     
-    <div class="fas fa-bars"></div>
+    <div className="fas fa-bars"></div>
 
     </div>
     </header>
@@ -37,7 +37,7 @@ export default function Login(props) {
         </div>
         <div className="col-md-6 pl-md-5" data-aos="fade-left">
             <form style={{fontSize:'2rem'}}>
-                <div class="mb-3">
+                <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                     <input type="password" className="form-control" name="password" id="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
                 </div>

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import  db from '../../../public/firebase-config';
 import doctorImg from '../../../public/doctor.svg'
 import { useRouter } from 'next/router'
-export default function doctor() {
+export default function Doctor() {
     const router = useRouter();
     const patId=router.query.hospname;
     const [data,setdata]=useState();
@@ -61,12 +61,12 @@ export default function doctor() {
         </ul>
     </nav>
     
-    <div class="fas fa-bars"></div>
+    <div className="fas fa-bars"></div>
 
     </div>
     </header>
     <div style={{width:'100%',marginLeft:'150px',marginTop:'150px'}}>
-        <div class="row" style={{width:'80%'}}>
+        <div className="row" style={{width:'80%'}}>
             {showdata()}
         </div>
       </div>

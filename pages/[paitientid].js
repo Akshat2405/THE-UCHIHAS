@@ -3,14 +3,14 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import homeImg from '../public/Home-img.svg'
-export default function patientid() {
+export default function Patientid() {
     const router = useRouter();
     const patId=router.query.paitientid;
     console.log()
   return (
     <>
     <header>
-    <div class="container">
+    <div className="container">
 
     <Link href="/"><a className="logo"><span>H</span>ealth<span>C</span>are.</a></Link>
 
@@ -22,7 +22,7 @@ export default function patientid() {
         </ul>
     </nav>
     
-    <div class="fas fa-bars"></div>
+    <div className="fas fa-bars"></div>
 
     </div>
     </header>

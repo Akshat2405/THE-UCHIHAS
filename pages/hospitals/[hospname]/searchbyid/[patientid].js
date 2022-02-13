@@ -4,7 +4,7 @@ import loginImg from '../../../../public/Login-img.svg'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import db from '../../../../public/firebase-config'
-export default function patientId() {
+export default function PatientId() {
     const router = useRouter();
     const hospname=router.query.hospname;
     const patId2=router.query.patientid;

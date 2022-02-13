@@ -4,7 +4,7 @@ import { useState } from 'react'
 import  db from '../../../../public/firebase-config';
 import doctorImg from '../../../../public/doctor.svg'
 import { useRouter } from 'next/router'
-export default function vanti() {
+export default function Vanti() {
     const router = useRouter();
     const patId=router.query.hospname;
     const [data,setdata]=useState();
@@ -67,12 +67,12 @@ export default function vanti() {
         </ul>
     </nav>
     
-    <div class="fas fa-bars"></div>
+    <div className="fas fa-bars"></div>
 
     </div>
     </header>
     <div style={{width:'100%',marginLeft:'150px',marginTop:'150px'}}>
-        <div class="row" style={{width:'80%'}}>
+        <div className="row" style={{width:'80%'}}>
             {showdata()}
         </div>
       </div>

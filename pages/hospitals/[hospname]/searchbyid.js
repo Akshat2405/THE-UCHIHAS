@@ -3,7 +3,7 @@ import Image from 'next/image'
 import loginImg from '../../../public/Login-img.svg'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-export default function searchbyId() {
+export default function SearchbyId() {
     const router = useRouter();
     const patId=router.query.hospname;
     const[str,setstr]=useState("/hospitals/"+patId+"/searchbyid");
@@ -15,7 +15,7 @@ export default function searchbyId() {
   return (
     <>
     <header>
-    <div class="container">
+    <div className="container">
 
     <Link href="/"><a className="logo"><span>H</span>ealth<span>C</span>are.</a></Link>
 
@@ -25,7 +25,7 @@ export default function searchbyId() {
         </ul>
     </nav>
     
-    <div class="fas fa-bars"></div>
+    <div className="fas fa-bars"></div>
 
     </div>
     </header>
@@ -40,7 +40,7 @@ export default function searchbyId() {
         </div>
         <div className="col-md-6 pl-md-5" data-aos="fade-left">
             <form style={{fontSize:'2rem'}}>
-                <div class="mb-3">
+                <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">id</label>
                     <input type="text" className="form-control" name="password" id="password" value={password} onChange={setId} />
                 </div>

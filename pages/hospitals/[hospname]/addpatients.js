@@ -5,7 +5,7 @@ import  db from '../../../public/firebase-config';
 import doctorImg from '../../../public/doctor.svg'
 import { useRouter } from 'next/router'
 import patImg from '../../../public/hospImg.svg'
-export default function addpat() {
+export default function Addpat() {
     const router = useRouter();
     const patId=router.query.hospname;
     const [data,setdata]=useState();
@@ -53,7 +53,7 @@ export default function addpat() {
         </ul>
     </nav>
     
-    <div class="fas fa-bars"></div>
+    <div className="fas fa-bars"></div>
 
     </div>
     </header>

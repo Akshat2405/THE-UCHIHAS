@@ -4,7 +4,7 @@ import { useState } from 'react'
 import  db from '../../../public/firebase-config';
 import doctorImg from '../../../public/doctor.svg'
 import { useRouter } from 'next/router'
-export default function facility() {
+export default function Facility() {
     const router = useRouter();
     const patId=router.query.hospname;
     const [data,setdata]=useState();
@@ -29,10 +29,10 @@ export default function facility() {
                       )
                   }
                     str.push(
-                        <div class="card">
-                        <div class="d-flex justify-content-between">
+                        <div className="card">
+                        <div className="d-flex justify-content-between">
                             <div >
-                            <div class="d-flex justify-content-between">
+                            <div className="d-flex justify-content-between">
                             <Image src={doctorImg} width="200px" height="200px" alt="find nothing"/>
                             <div style={{margin:'10px'}}>{key}</div>
                             </div>
@@ -52,7 +52,7 @@ export default function facility() {
   return (
     <>
     <header>
-    <div class="container">
+    <div className="container">
 
     <Link href="/"><a className="logo"><span>H</span>ealth<span>C</span>are.</a></Link>
 
@@ -65,12 +65,12 @@ export default function facility() {
         </ul>
     </nav>
     
-    <div class="fas fa-bars"></div>
+    <div className="fas fa-bars"></div>
 
     </div>
     </header>
     <div style={{width:'100%',marginLeft:'150px',marginTop:'150px'}}>
-        <div class="row" style={{width:'80%'}}>
+        <div className="row" style={{width:'80%'}}>
             {showdata()}
         </div>
       </div>

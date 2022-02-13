@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import HospImg from '../../public/hospImg.svg'
 import  db from '../../public/firebase-config';
-export default function patientid() {
+export default function Patientid() {
     const router = useRouter();
     const patId=router.query.hospname;
     const strdoctor="/hospitals/"+patId+"/doctors";
@@ -15,7 +15,7 @@ export default function patientid() {
   return (
     <>
     <header>
-    <div class="container">
+    <div className="container">
 
     <Link href="/"><a className="logo"><span>H</span>ealth<span>C</span>are.</a></Link>
 
@@ -28,7 +28,7 @@ export default function patientid() {
         </ul>
     </nav>
     
-    <div class="fas fa-bars"></div>
+    <div className="fas fa-bars"></div>
 
     </div>
     </header>
