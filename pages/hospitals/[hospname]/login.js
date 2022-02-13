@@ -38,7 +38,7 @@ export default function Login(props) {
             <form style={{fontSize:'2rem'}}>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                    <input type="password" className="form-control" name="password" id="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+                    <input type="text" className="form-control" name="password" id="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
                 </div>
             <Link href={str}><a ><button className="button">Submit</button></a></Link>
             </form>
