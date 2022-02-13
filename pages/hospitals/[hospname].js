@@ -11,6 +11,7 @@ export default function patientid() {
     const strhome="/hospitals/"+patId;
     const strPat="/hospitals/"+patId+"/patients";
     const straddpat="/hospitals/"+patId+"/addpatients";
+    const strfaciliy="/hospitals/"+patId+"/facilities";
   return (
     <>
     <header>
@@ -23,6 +24,7 @@ export default function patientid() {
             <li><Link href={strhome}><a className="navtag">home</a></Link></li>
             <li><Link href={strdoctor}><a className="navtag">Doctors</a></Link></li>
             <li><Link href={strPat}><a className="navtag">Patients</a></Link></li>
+            <li><Link href={strfaciliy}><a className="navtag">Facility</a></Link></li>
         </ul>
     </nav>
     

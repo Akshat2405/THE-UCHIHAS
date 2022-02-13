@@ -12,6 +12,7 @@ export default function addpat() {
     const strdoctor="/hospitals/"+patId+"/doctors";
     const strhome="/hospitals/"+patId;
     const strPat="/hospitals/"+patId+"/patients";
+    const strfaciliy="/hospitals/"+patId+"/facilities";
     const ref=db.ref(`${patId}/PATIENTS`);
     const [id,setId]=useState('');
     const[name,setname]=useState('');
@@ -77,6 +78,7 @@ export default function addpat() {
             <li><Link href={strhome}><a className="navtag">home</a></Link></li>
             <li><Link href={strdoctor}><a className="navtag">Doctors</a></Link></li>
             <li><Link href={strPat}><a className="navtag">Patients</a></Link></li>
+            <li><Link href={strfaciliy}><a className="navtag">Facility</a></Link></li>
         </ul>
     </nav>
     

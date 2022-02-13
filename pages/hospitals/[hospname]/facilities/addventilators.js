@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import  db from '../../../public/firebase-config';
-import doctorImg from '../../../public/doctor.svg'
+import  db from '../../../../public/firebase-config';
+import doctorImg from '../../../../public/doctor.svg'
 import { useRouter } from 'next/router'
-export default function doctor() {
+export default function vanti() {
     const router = useRouter();
     const patId=router.query.hospname;
     const [data,setdata]=useState();
@@ -12,14 +12,24 @@ export default function doctor() {
     const strhome="/hospitals/"+patId;
     const strPat="/hospitals/"+patId+"/patients";
     const strfaciliy="/hospitals/"+patId+"/facilities";
-    const ref=db.ref(`${patId}/DOCTORS`);
+    const ref=db.ref(`/`);
     ref.once('value',(sanpshot)=>{
         setdata(sanpshot.val())
     });
+    let venti='VENTILATORS';
+    let avail='available';
     const showdata=()=>{
         let str=[];
         if(data!==undefined){
               for(let key in data){
+                  if(key===patId) continue;
+                  let arr=[];
+                  let ck=true;
+                  for(let key2 in data[key][venti]){
+                      arr.push(<div>{key2}:{data[key][venti][key2]}</div>)
+                      if(data[key][venti][key2]===0) ck=false;
+                  }
+                  if(ck===false) continue;
                     str.push(
                         <div class="card">
                         <div class="d-flex justify-content-between">
@@ -30,9 +40,7 @@ export default function doctor() {
                             </div>
                             </div>
                             <div className=''>
-                                <div>MON-FRI</div>
-                                <div>9:00 to 16:00</div>
-                                <div>350</div>
+                                {arr}
                             </div>
                         </div>
                         </div>
@@ -55,6 +63,7 @@ export default function doctor() {
             <li><Link href={strdoctor}><a className="navtag">Doctors</a></Link></li>
             <li><Link href={strPat}><a className="navtag">Patients</a></Link></li>
             <li><Link href={strfaciliy}><a className="navtag">Facility</a></Link></li>
+
         </ul>
     </nav>
     

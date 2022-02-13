@@ -4,7 +4,7 @@ import { useState } from 'react'
 import  db from '../../../public/firebase-config';
 import doctorImg from '../../../public/doctor.svg'
 import { useRouter } from 'next/router'
-export default function doctor() {
+export default function facility() {
     const router = useRouter();
     const patId=router.query.hospname;
     const [data,setdata]=useState();
@@ -12,14 +12,22 @@ export default function doctor() {
     const strhome="/hospitals/"+patId;
     const strPat="/hospitals/"+patId+"/patients";
     const strfaciliy="/hospitals/"+patId+"/facilities";
-    const ref=db.ref(`${patId}/DOCTORS`);
-    ref.once('value',(sanpshot)=>{
-        setdata(sanpshot.val())
+    const stradd="/hospitals/"+patId+"/facilities/addventilators";
+    const ref=db.ref(`${patId}`);
+    ref.once('value',(snapshot)=>{
+        setdata(snapshot.val())
     });
     const showdata=()=>{
         let str=[];
         if(data!==undefined){
               for(let key in data){
+                  if(key==='DOCTORS' || key==='PATIENTS') continue;
+                  let arr=[];
+                  for(let key2 in data[key]){
+                      arr.push(
+                        <div style={{fontSize:'2rem'}}>{key2}:{data[key][key2]}</div>
+                      )
+                  }
                     str.push(
                         <div class="card">
                         <div class="d-flex justify-content-between">
@@ -29,10 +37,9 @@ export default function doctor() {
                             <div style={{margin:'10px'}}>{key}</div>
                             </div>
                             </div>
-                            <div className=''>
-                                <div>MON-FRI</div>
-                                <div>9:00 to 16:00</div>
-                                <div>350</div>
+                            <div style={{marginTop:'40px',marginRight:'40px'}}>
+                                {arr}
+                                <Link href={stradd}><a><button className="button" style={{width:'20rem'}}>Request {key}</button></a></Link>
                             </div>
                         </div>
                         </div>
