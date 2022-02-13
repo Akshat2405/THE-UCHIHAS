@@ -70,27 +70,27 @@ export default function Addpat() {
               <div className="col-md-6 pl-md-5 content" data-aos="fade-left">
               <form style={{fontSize:'2rem'}}>
                 <div className="mb-3">
-                    <label htmlfor="exampleInputEmail1" className="form-label">Id</label>
+                    <label htmlFor="exampleInputEmail1" className="form-label">Id</label>
                     <input type="text" className="form-control" id="id" name="id" aria-describedby="emailHelp"  value={id}onChange={(e)=>setId(e.target.value)}/>
                 </div>
                 <div className="mb-3">
-                    <label htmlfor="exampleInputEmail1" className="form-label">Name</label>
+                    <label htmlFor="exampleInputEmail1" className="form-label">Name</label>
                     <input type="text" className="form-control" id="name" name="name" aria-describedby="emailHelp"  value={name}onChange={(e)=>setname(e.target.value)}/>
                 </div>
                 <div className="mb-3">
-                    <label htmlfor="exampleInputEmail1" className="form-label">Age</label>
+                    <label htmlFor="exampleInputEmail1" className="form-label">Age</label>
                     <input type="text" className="form-control" id="age" name="age" aria-describedby="emailHelp"  value={age}onChange={(e)=>setage(e.target.value)}/>
                 </div>
                 <div className="mb-3">
-                    <label htmlfor="exampleInputEmail1" className="form-label">Disease</label>
+                    <label htmlFor="exampleInputEmail1" className="form-label">Disease</label>
                     <input type="text" className="form-control" id="disease" name="disease" aria-describedby="emailHelp"  value={disease}onChange={(e)=>setdisease(e.target.value)}/>
                 </div>
                 <div className="mb-3">
-                    <label htmlfor="exampleInputEmail1" className="form-label">Number</label>
+                    <label htmlFor="exampleInputEmail1" className="form-label">Number</label>
                     <input type="text" className="form-control" id="number" name="number" aria-describedby="emailHelp"  value={number}onChange={(e)=>setnumber(e.target.value)}/>
                 </div>
                 <div className="mb-3">
-                <label for="exampleFormControlTextarea1" className="form-label">Treatment Description</label>
+                <label htmlFor="exampleFormControlTextarea1" className="form-label">Treatment Description</label>
                 <textarea className="form-control" id="description" name="description"  value={description}onChange={(e)=>setdiscription(e.target.value)} rows="3"></textarea>
                 </div>
                 <button type="submit" className="button" onClick={submitform}>Submit</button>
